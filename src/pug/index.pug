@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		title Architecture Lessons Learned 2016 Edition
+		link(rel='stylesheet', href='css/style.css')
+	body(onLoad="initApp()")
+		section.reveal
+			header
+				.title Architecture Lessons Learned
+				.right js.talks() 2016
+			section.slides
+				section
+					h1 Architecture Lessons Learned
+					p js.talks() 2016
+				section
+					h2 Agenda
+					section
+						ul
+							li A common approach to multi-platform (web, desktop, mobile) app architecture.
+							li Potent blend of rxjs streams, redux-like state machine and virtual dom (not React)
+							li Purely npm based asset pipeline and automation (Throw away gulp and bower)
+					section
+						ul
+							li The Motivation
+							li How I got here
+							li Ingredients of a potent blend
+							li A common approach
+							li Examples and Livecoding
+				section
+						section
+							h2 The Motivation
+						section
+							h2 Iteration Loop
+						section
+							h2 Bruce Lee and Jeet Kune Do
+						section
+							h2 The War of Art
+				section
+					h2 How I got here
+					section
+						h3 Creative and Chaotic Early Days
+					section
+						h3 Learning the trade
+					section
+						h3 Alan Kay and Xerox Parc
+					section
+						h3 The Lost Years
+					section
+						h3 Startups, Hackathons and Prototypes
+					section
+						h3 Open Source and Full Stack
+					section
+						h3 Last Year
+				section
+					h2 Ingredients of a potent blend
+					section
+						ul
+							li Functional Programming
+							li Rx.js (Streams, Streams, Streams)
+							li Snabbdom and Hyperscript
+							li Just npm instead of npm, bower & gulp
+					section
+						h3 Functional Programming
+						pre: code.javascript.
+							const users = [
+								{ id: 1, name: "Pesho", email: "pesho@mail.bg" },
+								{ id: 2, name: "Gosho", email: "gosho@abv.bg" },
+								{ id: 3, name: "Tosho", email: "tosho@gmail.com" },
+							];
+
+							users.reduce((hash, user) =>
+								(hash[user.id] = user.name) && hash
+							, {});
+							// {1: Pesho, 2: Gosho, 3: Tosho}
+
+				section
+					h2 A common approach
+					img(src="assets/common-approach.svg", style="border: 0px; Background: white")
+				section
+					h2 Examples and Livecoding
+		//- load the app
+		script(src="lib/reveal.js/lib/js/head.min.js")
+		script(src="js/app.js")

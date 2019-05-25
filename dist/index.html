@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Architecture Lessons Learned 2016 Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body onLoad="initApp()">
+    <section class="reveal">
+      <header>
+        <div class="title">Architecture Lessons Learned</div>
+        <div class="right">js.talks() 2016</div>
+      </header>
+      <section class="slides">
+        <section>
+          <h1>Architecture Lessons Learned</h1>
+          <p>js.talks() 2016</p>
+        </section>
+        <section>
+          <h2>Agenda</h2>
+          <section>
+            <ul>
+              <li>A common approach to multi-platform (web, desktop, mobile) app architecture.</li>
+              <li>Potent blend of rxjs streams, redux-like state machine and virtual dom (not React)</li>
+              <li>Purely npm based asset pipeline and automation (Throw away gulp and bower)</li>
+            </ul>
+          </section>
+          <section>
+            <ul>
+              <li>The Motivation</li>
+              <li>How I got here</li>
+              <li>Ingredients of a potent blend</li>
+              <li>A common approach</li>
+              <li>Examples and Livecoding</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>The Motivation</h2>
+          </section>
+          <section>
+            <h2>Iteration Loop</h2>
+          </section>
+          <section>
+            <h2>Bruce Lee and Jeet Kune Do</h2>
+          </section>
+          <section>
+            <h2>The War of Art</h2>
+          </section>
+        </section>
+        <section>
+          <h2>How I got here</h2>
+          <section>
+            <h3>Creative and Chaotic Early Days</h3>
+          </section>
+          <section>
+            <h3>Learning the trade</h3>
+          </section>
+          <section>
+            <h3>Alan Kay and Xerox Parc</h3>
+          </section>
+          <section>
+            <h3>The Lost Years</h3>
+          </section>
+          <section>
+            <h3>Startups, Hackathons and Prototypes</h3>
+          </section>
+          <section>
+            <h3>Open Source and Full Stack</h3>
+          </section>
+          <section>
+            <h3>Last Year</h3>
+          </section>
+        </section>
+        <section>
+          <h2>Ingredients of a potent blend</h2>
+          <section>
+            <ul>
+              <li>Functional Programming</li>
+              <li>Rx.js (Streams, Streams, Streams)</li>
+              <li>Snabbdom and Hyperscript</li>
+              <li>Just npm instead of npm, bower & gulp</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Functional Programming</h3>
+            <pre><code class="javascript">const users = [
+	{ id: 1, name: "Pesho", email: "pesho@mail.bg" },
+	{ id: 2, name: "Gosho", email: "gosho@abv.bg" },
+	{ id: 3, name: "Tosho", email: "tosho@gmail.com" },
+];
+
+users.reduce((hash, user) =>
+	(hash[user.id] = user.name) && hash
+, {});
+// {1: Pesho, 2: Gosho, 3: Tosho}
+</code></pre>
+          </section>
+        </section>
+        <section>
+          <h2>A common approach</h2><img src="assets/common-approach.svg" style="border: 0px; Background: white">
+        </section>
+        <section>
+          <h2>Examples and Livecoding</h2>
+        </section>
+      </section>
+    </section>
+    <script src="lib/reveal.js/lib/js/head.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
